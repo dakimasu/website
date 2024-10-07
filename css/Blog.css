@@ -1,0 +1,50 @@
+/* Before clicking on a post. */
+#BlogContainer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-left: 5px;
+    padding-right: 7px;
+    
+    border: 2px white solid;
+
+    cursor: pointer;
+}
+
+#BlogContainer > div:hover {
+    transform: scale(1, 1.2);
+    transition: all 0.1s;
+}
+
+#BlogContainer > div:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+#BlogContainer > div > h1 {
+    margin: 0px;
+}
+
+/* After clicking on a post. */
+#BlogContainer > h1,p {
+    margin: 0px;
+}
+#BlogContainer > h2,h3,h4,h6 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+#BlogContainer > code {
+    background-color: gray;
+    
+    border-radius: 5px;
+
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    
+    font-weight: 600;
+}
+#BlogContainer > img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

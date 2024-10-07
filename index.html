@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Info -->
+    <title>d4ki.org</title>
+    <meta name="author" content="dakimasu" />
+    <link type="text/plain" rel="author" href="./humans.txt" />
+    <meta name="description" content="My website! :3c" />
+    <meta name="keywords" content="Blog, Personal web" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    
+    <!-- Info For Browsers -->
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/Index.css" type="text/css" />
+    <link rel="stylesheet" href="./css/Fonts.css" type="text/css" />
+    <link rel="stylesheet" href="./css/Blog.css" type="text/css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Reddit Sans Condensed -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="Main">
+      <div id="Side">
+        <div id="Side-Top">
+          <script src="./js/ProfilePicLogic.js"></script>
+          <strong>DAKIMASU</strong>
+        </div>
+        <div id="Side-Bottom">
+          <a href="#Home" onclick="navigate(event.target.href.split('#')[1])">Home</a>
+          <a href="#Blog" onclick="navigate(event.target.href.split('#')[1])">Blog</a>
+          <a href="#Enjoy" onclick="navigate(event.target.href.split('#')[1])">Things I Enjoy</a>
+          <a href="#Credits" onclick="navigate(event.target.href.split('#')[1])">Credits</a>
+        </div>
+      </div>
+      <div id="Content"></div>
+      <script src="./js/BlogLogic.js"></script>
+      <script src="./js/PageLogic.js"></script>
+    </div>
+  </body>
+</html>

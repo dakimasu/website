@@ -1,0 +1,35 @@
+[
+    {
+        "Name":"First Blog!",
+        "Date":"2024-10-04T21:57:01+02:00",
+        "Content": [
+            "h1#It works!! :3",
+            "hr#",
+            "p#The way I'm doing this is absolutely vile! But it works!!! TvT",
+            "p#So let me explain the bullshittery behind all of this!",
+            "h2#JSON is a plague AND I'M USING IT EVERYWHERE!!! X3",
+            "hr#",
+            "p#Yes... Every post is stored in JSON. (pronounced žsón)",
+            "p#There's no fancy markdown to JSON on the backend, no, this is all on the frontend. I have to type out these posts in a syntax I sucked out of my fingers in two hours :c",
+            "p#Let's take a look at how one example post looks...",
+            "img#./pages/blog/first_blog/PostExample.png!Image showcasing the JSON structure, explained bellow.",
+            "p#Now... it looks really bad and a pain to write in... WHICH IT IS :,c",
+            "p#Buuuutttttttttttttttttttttttttttt it works! Quite flawlessly infact.",
+            "code#ELEMENT#String",
+            "p#I think that is self explenatory. Where 'ELEMENT' is you type what html element you want. Instead of 'String' you type the text you want!",
+            "p#Currently (yes, I plan to expand this REALLY BAD syntax) there are only two exceptions. Img and a.",
+            "code#img#src!alt",
+            "p#All images on the interweb SHOULD have an alt, we don't want our blind friends feeling left out! So, I added the option to add one. At this time, it's hoping that there isn't an exclamation mark in the src... LOL",
+            "code#a#href!String",
+            "p#Again, betting on there not being an exclamation mark in the link... I KNOW I HAVE TO MAKE IT BETTER!!!! BUT IT'S HARD OKAY!!!",
+            "p#Aside from that, the JavaScript is pretty standard, just some JSON manipulation.",
+            "h2#So, what's the future? ;o",
+            "hr#",
+            "p#IDK tbh, I may continue this syntax. I never saw someone making a note/blog DIRECTLY IN JSON XP, so it could be fun to develop this as my abilities grow. Who knows! (I will probably just switch it for markdown HEH) Was it fun though? Yes!",
+            "p#I am aware of how ugly the blog looks atm, no need to rub it in my face... I will gradually work on it and improve it.",
+            "strong#Source Code is  at ",
+            "a#https://github.com/dakimasu/website!My GitHub.",
+            "em#\nAnd you can't press 'Go Back a Page' btw, lol, just click on the blog button again, for now."
+        ]
+    }
+]

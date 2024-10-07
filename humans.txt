@@ -1,0 +1,14 @@
+/* TEAM */
+Your title: dakimasu
+Site: dakimasuu@gmail.com
+Twitter: dakimasu_
+Location: Czech Republic
+
+/* THANKS */
+Name: https://www.w3schools.com/
+
+/* SITE */
+Last update: 2024/10/07
+Standards: HTML5, CSS3
+Components: 
+Software: Visual Studio Code, Git
