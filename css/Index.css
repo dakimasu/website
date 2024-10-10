@@ -17,7 +17,7 @@ body {
   background-size: contain;
 }
 
-div#Main {
+#Main {
   display: flex;
   justify-content: space-between;
 
@@ -27,7 +27,7 @@ div#Main {
   border: var(--border-size) solid var(--border-color);
 }
 
-div#Content { 
+#Content { 
   @media only screen and (max-width: 1240px) {
     width: 80%; 
   }
@@ -45,12 +45,12 @@ div#Content {
   overflow-x: hidden;
 }
 
-div#Content > h1 {
+#Content > h1 {
   margin-top: 2px;
   margin-bottom: 2px;
 }
 
-div#Side {
+#Side {
   @media only screen and (max-width: 1240px) {
     width: 20%;
   }
@@ -67,7 +67,7 @@ div#Side {
   overflow: hidden;
 }
 
-div#Side-Top {
+#Side-Top {
   display: flex;
 
   flex-direction: column;
@@ -76,7 +76,7 @@ div#Side-Top {
   text-align: center;
 }
 
-div#Side-Top > strong {
+#Side-Top > strong {
   @media only screen and (max-width: 1240px) {
     font-size: 4vw;
   }
@@ -89,7 +89,7 @@ div#Side-Top > strong {
   margin: 0px;
   font-size: 2vw;
 }
-img#ProfilePic {
+#ProfilePic {
   width: 70%;
 
   border-radius: 50%;
@@ -98,7 +98,7 @@ img#ProfilePic {
   margin-top: 5%;
 }
 
-div#Side-Bottom {
+#Side-Bottom {
   display: flex;
   flex-direction: column;
 
@@ -106,7 +106,7 @@ div#Side-Bottom {
 
   border-top: var(--border-size) solid var(--border-color);
 }
-div#Side-Bottom > a {
+#Side-Bottom > a {
   text-align: center;
 
   @media only screen and (max-width: 1240px) {
