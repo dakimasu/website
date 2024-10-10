@@ -11,49 +11,82 @@ function OpenBlog() {
     fetch("../pages/blog/Blog.json")
         .then((response) => response.json())
         .then((json) => {
+            console.log(json);
             json.forEach((post, index) => {
+                // This part displays all the posts in a clickable index.
+
+                // Creates title of a post.
                 const PostName = document.createElement("h1");
                 PostName.innerHTML = post.Name;
 
+                // Adds the date a post was created on.
                 const DateDisplay = document.createElement("em");
                 DateDisplay.innerHTML = new Date(post.Date).toLocaleString();
 
+                // Creates a container for the index of posts.
                 const PostContainer = document.createElement("div");
                 PostContainer.id = index;
+                // Adds the elements together.
                 PostContainer.appendChild(PostName);
                 PostContainer.appendChild(DateDisplay);
 
+                // Displays it.
                 BlogContainer.appendChild(PostContainer);
 
+                // Adds an onclick event to all posts.
                 document.getElementById(index).addEventListener("click", () => {
                     BlogContainer.innerHTML = ""; // Reset BlogContainer.
                     
+                    // Goes through each line in the json.
                     post.Content.forEach(line => {
-                        const LineSplit = line.split(/#(.*)/s);
-                        
-                        const Element = document.createElement(LineSplit[0]);
 
-                        switch (LineSplit[0]) {
+                        // Creates an element for each line.
+                        const line_element = document.createElement(line[0]);
+
+                        // Switch for all cases, main formatting config goes here.
+                        switch (line[0]) {
+                            // Images
                             case "img":
-                                Element.src = LineSplit[1].split(/!(.*)/s)[0];
-                                Element.alt = LineSplit[1].split(/!(.*)/s)[1];
-                                break;
-                                
-                            case "a":
-                                Element.href = LineSplit[1].split(/!(.*)/s)[0];
-                                Element.innerHTML = LineSplit[1].split(/!(.*)/s)[1];
-                                break;
                             
+                                line_element.src = line[1];
+                                line_element.alt = line[2];
+
+                            break;
+
+                            // Links
+                            case "a":
+                            
+                                line_element.href = line[1];
+                                line_element.innerHTML = line[2];
+
+                            break;
+
+                            // Thematic line breaks
+                            case "hr":
+                                // We do nothing!
+                            break;
+
+                            // All others
                             default:
-                                if (LineSplit[1].includes("\n")) {
-                                    BlogContainer.appendChild(document.createElement("br"));
-                                }
-                                Element.innerHTML = LineSplit[1];
-                                break;
+                                line.slice(1).forEach(line_part => {
+                                    if (line_part != "\n") {
+                                        
+                                        line_element.innerHTML += line_part;
+                                        
+                                    } else {
+                                        
+                                        line_element.appendChild(document.createElement("br"));
+
+                                    }
+            
+                                });
+                            break;
                         }
-                        
-                        BlogContainer.appendChild(Element);
-                    })
+
+                        // Adds the line to the end of the blog container.
+                        BlogContainer.appendChild(line_element);
+
+                    });
                 });
             });
         });
