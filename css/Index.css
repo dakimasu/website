@@ -17,6 +17,10 @@ body {
   background-size: contain;
 }
 
+button {
+  color: black;
+}
+
 #Main {
   display: flex;
   justify-content: space-between;
