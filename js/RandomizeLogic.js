@@ -2,7 +2,7 @@ async function Randomize() {
     const Display = document.getElementById("Result");
     const delay = ms => new Promise(res => setTimeout(res, ms)); // Stolen off of Stack Overflow
 
-    new Audio("../sound/Gamble.wav").play();
+    await new Audio("../sound/Gamble.wav").play();
 
     const PoolOfExercises = await fetch("../json/Exercises.json").then(result => result.json());
 
@@ -14,3 +14,4 @@ async function Randomize() {
         await delay(100);
     }
 }
+Randomize();
