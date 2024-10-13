@@ -39,7 +39,7 @@
             ],
             [
                 "img",
-                "./pages/blog/first_blog/PostExample.png",
+                "./blog/first_blog/PostExample.png",
                 "Image showcasing the JSON structure, explained bellow."
             ],
             [

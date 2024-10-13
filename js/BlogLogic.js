@@ -8,7 +8,7 @@ function OpenBlog() {
 
     Display.appendChild(BlogContainer);
 
-    fetch("../pages/blog/Blog.json")
+    fetch("../json/Blog.json")
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
