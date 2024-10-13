@@ -1,8 +1,10 @@
-async function Randomize() {
+async function Randomize(Input) {
     const Display = document.getElementById("Result");
     const delay = ms => new Promise(res => setTimeout(res, ms)); // Stolen off of Stack Overflow
 
-    await new Audio("../sound/Gamble.wav").play();
+    if (Input != undefined) {
+        await new Audio("../sound/Gamble.wav").play();
+    }
 
     const PoolOfExercises = await fetch("../json/Exercises.json").then(result => result.json());
 
